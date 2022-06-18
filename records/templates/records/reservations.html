@@ -1,0 +1,31 @@
+<body>
+    {% if booked_rooms %}
+    <table>
+        <thead>
+            <th> Name </th>
+            <th> Email </th>
+            <th> Occupation </th>
+            <th> Amount Paid </th>
+            <th> Room Number </th>
+            <th>Number of Nights </th>
+            <th> Start Date </th>
+            <th> End Date </th>
+        </thead>
+
+        {% for room in booked_rooms %}
+            <tr>
+                <td>{{room.Name}}</td>
+                <td>{{room.Email}}</td>
+                <th>{{room.Occupation}}</th>
+                <th>{{room.AmountPaid}}</th>
+                <th>{{room.Room_Number}}</th>
+                <th>{{room.NumberofNights}}</th>
+                <th>{{room.StartDate}}</th>
+                <th>{{room.EndDate}}</th>
+            </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <p> No Reservations yet </p>
+    {% endif %}
+</body>

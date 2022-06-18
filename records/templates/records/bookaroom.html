@@ -1,0 +1,15 @@
+<head>
+<h1>Welcome</h1>
+<h2>Please book a room here</h2>
+</head>
+
+<body>
+<form action method = "post">
+    <table>
+        {% csrf_token %}
+        {{ form }}
+    </table>
+
+    <input type='submit' value=Submit>
+</form>
+</body>
